@@ -1,25 +1,51 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class Offsite_services extends Component {
+  nextPath(path) {
+    this.props.history.push(path);
+  }
   render() {
     return (
       <div>
-        <h2>Welcome to the Best Community Service Website</h2>
+        <h2>Offsite Services</h2>
+        <h3>Shuttle Services</h3>
+        <img
+          src="http://picsum.photos/500/100"
+          alt="Lorem Picsum Image"
+          align="middle"
+          hspace="10"
+        />
         <h3>
           Lorem ipsum dolor sit ametk, consectetur adipiscing elit. Quisque quis
           tortor nunc. Nunc in aliquet dui. Ut vel lorem nec lacus feugiat
           imperdiet. Maecenas eleifend augue in venenatis blandit. Sed
           consectetur dapibus malesuada. Donec ac efficitur lectus, id tempus
-          nisi. Quisque eget urna vel augue vulputate egestas vitae eget velit.
-          Fusce rutrum, nunc vel tristique rhoncus, dolor diam egestas tortor,
-          non luctus sem libero sed ex. Morbi vehicula lobortis convallis. Cras
-          euismod erat vitae tempor posuere. Duis ac felis congue, laoreet nisi
-          quis, sodales dui. Suspendisse at leo non ante volutpat finibus sit
-          amet ut neque. Maecenas finibus odio tempus ante efficitur ultricies.
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-          per inceptos himenaeos. Nunc dignissim felis eu enim malesuada
-          suscipit. Maecenas vel erat enim.
+          nisi. Nunc dignissim felis eu enim malesuada suscipit. Maecenas vel
+          erat enim.
         </h3>
+        <button onClick={() => this.nextPath("/shuttle_schedule")}>
+          See Shuttle Schedule
+        </button>
+
+        <h3>Home Care Services</h3>
+        <img
+          src="http://picsum.photos/500/140"
+          alt="Lorem Picsum Image"
+          align="right"
+          hspace="10"
+        />
+        <h3>
+          Lorem ipsum dolor sit ametk, consectetur adipiscing elit. Quisque quis
+          tortor nunc. Nunc in aliquet dui. Ut vel lorem nec lacus feugiat
+          imperdiet. Maecenas eleifend augue in venenatis blandit. Sed
+          consectetur dapibus malesuada. Donec ac efficitur lectus, id tempus
+          nisi. Nunc dignissim felis eu enim malesuada suscipit. Maecenas vel
+          erat enim.
+        </h3>
+        <button onClick={() => this.nextPath("/home_care_request")}>
+          Request Home Care Services
+        </button>
       </div>
     );
   }

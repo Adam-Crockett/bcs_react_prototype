@@ -5,12 +5,14 @@ import Events from "./views/Events";
 import Classes from "./views/Classes";
 import Offsite_services from "./views/Offsite_services";
 import SignIn from "./views/SignIn";
+import Event_creation from "./views/Event_creation";
+import Payment from "./views/Payment";
+import Request_shuttle from "./views/Request_shuttle";
+import HC_request from "./views/HC_request";
+import Class_signup from "./views/Class_signup";
+import Shuttle_schedule from "./views/Shuttle_schedule";
 
 class App extends Component {
-  nextPath(path) {
-    this.props.history.push(path);
-  }
-
   render() {
     return (
       <HashRouter>
@@ -42,6 +44,12 @@ class App extends Component {
             <Route path="/classes" component={Classes} />
             <Route path="/offsite_services" component={Offsite_services} />
             <Route path="/signin" component={SignIn} />
+            <Route path="/event_creation" component={Event_creation} />
+            <Route path="/payment" component={Payment} />
+            <Route path="/class_signup" component={Class_signup} />
+            <Route path="/home_care_request" component={HC_request} />
+            <Route path="/shuttle_schedule" component={Shuttle_schedule} />
+            <Route path="/request_shuttle" component={Request_shuttle} />
           </div>
         </div>
       </HashRouter>

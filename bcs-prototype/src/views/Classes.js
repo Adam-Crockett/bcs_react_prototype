@@ -1,6 +1,12 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import Calendar from "react-calendar";
 
 class Classes extends Component {
+  nextPath(path) {
+    this.props.history.push(path);
+  }
+
   render() {
     return (
       <div>
@@ -18,7 +24,12 @@ class Classes extends Component {
           consectetur dapibus malesuada. Donec ac efficitur lectus, id tempus
           nisi.
         </h3>
-        <button onClick={() => this.nextPath("/event_creation")}>
+        <Calendar />
+        <p>
+          Sed consectetur dapibus malesuada. Donec ac efficitur lectus, id
+          tempus nisi.
+        </p>
+        <button onClick={() => this.nextPath("/class_signup")}>
           Join A Class
         </button>
       </div>
